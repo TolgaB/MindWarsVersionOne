@@ -22,6 +22,7 @@
     [self generateGrid];
     return self;
     
+    
 }
 
 
@@ -46,6 +47,11 @@
         [_grid addObject:temp];
     }
     
+}
+
+-(CGPoint) getPositionOfTile: (int) x andY: (int) y{
+    Tile *tempTile = _grid [x] [y];
+    return tempTile.point;
 }
 
 @end

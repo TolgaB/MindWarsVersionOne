@@ -12,7 +12,7 @@
 
 
 @implementation GamePlay {
-    
+    CCSprite* hero;
    
 }
 
@@ -20,15 +20,17 @@
 
 
 -(void)didLoadFromCCB {
+    
+    hero = [CCSprite spriteWithImageNamed:@"char.png"];
     [self gameStarted];
-    
-    
 }
 
 -(void)gameStarted {
     //This loads the grid
-    Grid *myGrid = [Grid init];
+    Grid *myGrid = [[Grid alloc ]init];
     NSLog(@"The grid has been initialized");
+    hero.position = [myGrid getPositionOfTile:1 andY:0];
+    
     
     
     

@@ -8,6 +8,14 @@
 
 #import "Tile.h"
 
-@implementation Tile
+@implementation Tile {
+    
+}
+
+-(id) init {
+    self = [super init];
+    
+    return self;
+}
 
 @end

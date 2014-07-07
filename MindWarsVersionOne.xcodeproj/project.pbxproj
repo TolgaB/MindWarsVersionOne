@@ -120,6 +120,7 @@
 		FD2ED6BF196B04FD00E0F387 /* send-button-inactive.png in Resources */ = {isa = PBXBuildFile; fileRef = FD2ED678196B04FC00E0F387 /* send-button-inactive.png */; };
 		FD2ED6C0196B04FD00E0F387 /* send-button-instate.png in Resources */ = {isa = PBXBuildFile; fileRef = FD2ED679196B04FC00E0F387 /* send-button-instate.png */; };
 		FD2ED6C1196B04FD00E0F387 /* send-field-landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = FD2ED67A196B04FC00E0F387 /* send-field-landscape.png */; };
+		FD2ED6C3196B541C00E0F387 /* char.png in Resources */ = {isa = PBXBuildFile; fileRef = FD2ED6C2196B541C00E0F387 /* char.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -260,6 +261,7 @@
 		FD2ED678196B04FC00E0F387 /* send-button-inactive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "send-button-inactive.png"; sourceTree = "<group>"; };
 		FD2ED679196B04FC00E0F387 /* send-button-instate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "send-button-instate.png"; sourceTree = "<group>"; };
 		FD2ED67A196B04FC00E0F387 /* send-field-landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "send-field-landscape.png"; sourceTree = "<group>"; };
+		FD2ED6C2196B541C00E0F387 /* char.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = char.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -401,6 +403,7 @@
 		B77F1B4617B978D7009739AE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FD2ED6C2196B541C00E0F387 /* char.png */,
 				B73789911807667A0076A88C /* Icons */,
 				B737893A180761570076A88C /* Published-iOS */,
 			);
@@ -586,6 +589,7 @@
 				FD2ED6C1196B04FD00E0F387 /* send-field-landscape.png in Resources */,
 				FD2ED6B7196B04FD00E0F387 /* mgwuPlaceholderIcon.png in Resources */,
 				FD2ED6C0196B04FD00E0F387 /* send-button-instate.png in Resources */,
+				FD2ED6C3196B541C00E0F387 /* char.png in Resources */,
 				B71F5919188484E7003F4D28 /* Settings.png in Resources */,
 				FD2ED691196B04FD00E0F387 /* mgwu-gk-notification@2x.png in Resources */,
 				FD2ED6A0196B04FD00E0F387 /* MGWUBackground-Landscape~iphone.png in Resources */,
