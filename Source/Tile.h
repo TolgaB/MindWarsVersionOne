@@ -10,4 +10,7 @@
 
 @interface Tile : CCNode
 
+@property(nonatomic, assign)CGPoint point;
+
+
 @end

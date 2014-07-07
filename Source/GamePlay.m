@@ -8,7 +8,7 @@
 
 #import "GamePlay.h"
 #import "Tile.h"
-#import "MakeGrid.h"
+#import "Grid.h"
 
 @implementation GamePlay {
     
@@ -21,6 +21,8 @@
 -(void)didLoadFromCCB {
     
 }
+
+
 
 
 
