@@ -17,6 +17,12 @@
     
 }
 
+-(id)init{
+    self = [super init];
+    [self generateGrid];
+    return self;
+    
+}
 
 
 

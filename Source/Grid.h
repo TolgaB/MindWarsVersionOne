@@ -11,6 +11,7 @@
 @interface Grid : CCNode
 
 
-
+-(void)generateGrid;
+-(id)init;
 
 @end

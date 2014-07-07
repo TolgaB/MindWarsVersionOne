@@ -10,19 +10,30 @@
 #import "Tile.h"
 #import "Grid.h"
 
+
 @implementation GamePlay {
     
-    
+   
 }
 
 
 
 
 -(void)didLoadFromCCB {
+    [self gameStarted];
+    
     
 }
 
-
+-(void)gameStarted {
+    //This loads the grid
+    Grid *myGrid = [Grid init];
+    NSLog(@"The grid has been initialized");
+    
+    
+    
+    
+}
 
 
 
