@@ -25,8 +25,7 @@
     //Initialize the main grid
     _grid = [[NSMutableArray alloc]init];
     
-    int xcord = 0;
-    int ycord = 0;
+  
     
     for (int i = 0; i < 3; i++){
         //Each "temp" array acts as a row in this case 3 tiles in a temp
