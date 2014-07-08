@@ -11,8 +11,11 @@
 @interface Grid : CCNode
 
 
+
+
 -(void)generateGrid;
 -(id)init;
 -(CGPoint) getPositionOfTile: (int) x andY: (int) y;
+
 
 @end

@@ -21,7 +21,7 @@
 
 -(void)didLoadFromCCB {
     
-    
+     self.userInteractionEnabled = TRUE;
     [self gameStarted];
 }
 
@@ -38,6 +38,21 @@
     
 }
 
+- (void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event
+{
+    CGPoint touchLocation = [touch locationInNode:self];
+    NSLog(@"GHETTO");
+   for (int m = 0; m < 2; m++){
+       for (int n = 0; n < 3; n++) {
+           
+           
+           
+       }
+       
+       
+   }
+    
+}
 
 
 @end
