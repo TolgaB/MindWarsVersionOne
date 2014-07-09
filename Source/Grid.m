@@ -22,7 +22,6 @@
     [self generateGrid];
     return self;
     
-    
 }
 
 
@@ -52,6 +51,14 @@
 -(CGPoint) getPositionOfTile: (int) x andY: (int) y{
     Tile *tempTile = _grid [x] [y];
     return tempTile.point;
+}
+
+-(Tile *) getTileForTouchPosition: (CGPoint) pos; {
+    NSLog(@"x: %f y: %f", pos.x, pos.y);
+    
+    
+    
+    return 0;
 }
 
 @end

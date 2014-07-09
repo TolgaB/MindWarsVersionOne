@@ -7,6 +7,7 @@
 //
 
 #import "CCNode.h"
+#import "Tile.h"
 
 @interface Grid : CCNode
 
@@ -16,6 +17,6 @@
 -(void)generateGrid;
 -(id)init;
 -(CGPoint) getPositionOfTile: (int) x andY: (int) y;
-
+-(Tile *) getTileForTouchPosition: (CGPoint) pos;
 
 @end

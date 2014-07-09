@@ -13,7 +13,7 @@
 
 @implementation GamePlay {
     CCSprite *_hero;
-   
+    Grid * myGrid;
 }
 
 
@@ -28,7 +28,7 @@
 -(void)gameStarted {
     
     //This loads the grid
-    Grid *myGrid = [[Grid alloc ]init];
+    myGrid = [[Grid alloc ]init];
     NSLog(@"The grid has been initialized");
     _hero.position = [myGrid getPositionOfTile:0 andY:0];
     
@@ -41,16 +41,9 @@
 - (void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event
 {
     CGPoint touchLocation = [touch locationInNode:self];
-    NSLog(@"GHETTO");
-   for (int m = 0; m < 2; m++){
-       for (int n = 0; n < 3; n++) {
-           
-           
-           
-       }
-       
-       
-   }
+    [myGrid getTileForTouchPosition:touchLocation];
+    
+    NSLog(@"Touch Gotten");
     
 }
 
