@@ -30,7 +30,7 @@
     //This loads the grid
     myGrid = [[Grid alloc ]init];
     NSLog(@"The grid has been initialized");
-    _hero.position = [myGrid getPositionOfTile:0 andY:0];
+    _hero.position = [myGrid getPositionOfTile:2 andY:0];
     
     
     
@@ -41,7 +41,10 @@
 - (void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event
 {
     CGPoint touchLocation = [touch locationInNode:self];
-    [myGrid getTileForTouchPosition:touchLocation];
+    Tile* myTile = [myGrid getTileForTouchPosition:touchLocation];
+    
+    _hero.position = myTile.position;
+    
     
     NSLog(@"Touch Gotten");
     

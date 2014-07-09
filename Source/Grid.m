@@ -39,7 +39,7 @@
         
         for (int j = 0; j< 3; j++){
             Tile* temptile = [[Tile alloc] init];
-            temptile.point = CGPointMake(i * 50 + 25, j * 50 + 25);
+            temptile.position = CGPointMake(i * 50 + 50, j * 50 + 50);
             [temp addObject:temptile];
         }
         
@@ -50,15 +50,31 @@
 
 -(CGPoint) getPositionOfTile: (int) x andY: (int) y{
     Tile *tempTile = _grid [x] [y];
-    return tempTile.point;
+    return tempTile.position;
 }
 
 -(Tile *) getTileForTouchPosition: (CGPoint) pos; {
+    
     NSLog(@"x: %f y: %f", pos.x, pos.y);
     
+    if (pos.x > 150 || pos.y > 150) {
+        NSLog(@"Touch out of grid");
+        return nil;
+    }
+    
+    if (pos.x < 25 || pos.y < 25) {
+        NSLog(@"Touch out of grid");
+        
+        return nil;
+    }
+    
+    float ypoint = pos.y;
+    float xpoint = pos.x;
+    
+    Tile* anotherTempTile = _grid [(int)floorf((xpoint - 25) / 50.0)] [(int)floorf((ypoint - 25.0) / 50.0)];
     
     
-    return 0;
+    return anotherTempTile;
 }
 
 @end

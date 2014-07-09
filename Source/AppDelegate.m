@@ -35,8 +35,8 @@
     
     
     [MGWU loadMGWU:@"t0lga"];
-    [MGWU preFacebook]; //Temporarily disables Facebook until you integrate it later
-    
+    [MGWU forceFacebook];
+
     
     
     // Configure Cocos2d with the options set in SpriteBuilder
@@ -68,5 +68,16 @@
 {
     return [CCBReader loadAsScene:@"GamePlay"];
 }
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    // attempt to extract a token from the url
+    return [MGWU handleURL:url];
+    
+    
+}
+
+
+
+
 
 @end

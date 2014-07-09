@@ -48,6 +48,8 @@
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
+	<key>FacebookAppID</key>
+	<string>1454137928177085</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UIPrerenderedIcon</key>
@@ -73,5 +75,14 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>URL Types</key>
+	<array>
+		<dict>
+			<key>Item 0</key>
+			<string>fb1454137928177085</string>
+			<key>URL Schemes</key>
+			<array/>
+		</dict>
+	</array>
 </dict>
 </plist>
