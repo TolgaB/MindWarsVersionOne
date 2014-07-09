@@ -1,32 +1,43 @@
 ## Game Design
 ### Objective
-[explain the goal of the game]
+The goal of the games is to kill the other player.
 
 ### Gameplay Mechanics
-[detail the game mechanics, do not include anything about theme/artwork]
+The way that the game starts is that either player spawns onto opposite sides of the grid. Both players are then given the choice to move to 1 adjacent block, shoot across any blocks, or melee and do damage to all adjacent blocks. It takes 2 arrows to kill the other player and 1 melee. Both players lock in there move THEN see what their opponent has done.
 
 ### Level Design
-[describe what a typical level or puzzle would look like]
+The level will be a 3 x 3 grid with a cool background (currently being decided by moi).
 
 
 ## Technical
 ### Scenes
-* [list the different scenes/screens used in the game]
+* Facebook log in screen
+* Choose game scene
+* Gameplay Scene
+* Win Or Lose Scene
+* Shop Scene
 
 ### Controls/Input
-[describe the control scheme used in the game]
+There will only be 4 contols/input in the game, the move button, the shoot button, the melee button, and the chat input interface.
 
 ### Classes/CCBs
 * Scenes
-  * [list SpriteBuilder scenes used]
+  * Mainscene
+  * Gameplay
+  * Result
+  * Shop
+  * Grid
+  * Tile
 * Nodes/Sprites
-  * [list SpriteBuilder nodes/sprites used]
+  * hero
+  * tile
+  * obstacle
 
 
 ## MVP Milestones
-[The overall milestones of first playable build, core gameplay, and polish are just suggestions, plan to finish earlier if possible. The last 20% of work tends to take about as much time as the first 80% so do not slack off on your milestones!]
+
 ### Week 1 (7/7 - 7/11/2014)
-* [goals for the week]
+* First Playable prototype 
 
 ### Week 2 (7/14 - 7/18/2014) - _finishing a playable build_
 * [goals for the week, should be finishing a playable game]
