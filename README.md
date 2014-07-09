@@ -39,17 +39,17 @@ There will only be 4 contols/input in the game, the move button, the shoot butto
 ### Week 1 (7/7 - 7/11/2014)
 * First Playable prototype 
 
-### Week 2 (7/14 - 7/18/2014) - _finishing a playable build_
-* [goals for the week, should be finishing a playable game]
+### Week 2 (7/14 - 7/18/2014) - 
+* Have a playable prototype with shooting built in
 
 ### Week 3 (7/21 - 7/25/2014)
-* [goals for the week]
+* Finished all the core mechanics
 
-### Week 4 (7/28 - 8/1/2014) - _finishing core gameplay_
-* [goals for the week, should be finishing all core gameplay]
+### Week 4 (7/28 - 8/1/2014)
+* Added polishing
 
 ### Week 5 (8/4 - 8/8/2014)
-* [goals for the week]
+* FIxing all bugs and possible add-ons
 
-### Week 6 (8/11 - 8/15/2014) - _finishing the polish_
-* [goals for the week, should be finishing the polish -- demo day on Saturday!]
+### Week 6 (8/11 - 8/15/2014) - 
+* Adding in app purchases
