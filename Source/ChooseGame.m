@@ -13,6 +13,18 @@
 
 -(void) play {
     NSLog(@"Play Pressed");
+    /*
+     2) Start a random match
+     */
+    [MGWU getRandomGameWithCallback:@selector(receivedRandomGame:) onTarget:self];
+}
+
+
+
+- (void)receivedRandomGame:(NSDictionary *)game {
+    // when we reveive a random game, present the GamePlay with this game
+    CCScene *scene = [CCBReader loadAsScene:@"GamePlay"];
+    [[CCDirector sharedDirector] pushScene:scene];
 }
 
 @end
