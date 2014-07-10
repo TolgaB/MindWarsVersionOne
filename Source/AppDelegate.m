@@ -66,7 +66,7 @@
 
 - (CCScene*) startScene
 {
-    return [CCBReader loadAsScene:@"GamePlay"];
+    return [CCBReader loadAsScene:@"ChooseGame"];
 }
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {

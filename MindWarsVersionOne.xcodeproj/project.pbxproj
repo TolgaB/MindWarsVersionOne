@@ -121,6 +121,7 @@
 		FD2ED6C0196B04FD00E0F387 /* send-button-instate.png in Resources */ = {isa = PBXBuildFile; fileRef = FD2ED679196B04FC00E0F387 /* send-button-instate.png */; };
 		FD2ED6C1196B04FD00E0F387 /* send-field-landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = FD2ED67A196B04FC00E0F387 /* send-field-landscape.png */; };
 		FD2ED6C3196B541C00E0F387 /* char.png in Resources */ = {isa = PBXBuildFile; fileRef = FD2ED6C2196B541C00E0F387 /* char.png */; };
+		FDBD6BBE196EF5EC00C3CCAC /* ChooseGame.m in Sources */ = {isa = PBXBuildFile; fileRef = FDBD6BBD196EF5EB00C3CCAC /* ChooseGame.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -262,6 +263,8 @@
 		FD2ED679196B04FC00E0F387 /* send-button-instate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "send-button-instate.png"; sourceTree = "<group>"; };
 		FD2ED67A196B04FC00E0F387 /* send-field-landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "send-field-landscape.png"; sourceTree = "<group>"; };
 		FD2ED6C2196B541C00E0F387 /* char.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = char.png; sourceTree = "<group>"; };
+		FDBD6BBC196EF5EB00C3CCAC /* ChooseGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChooseGame.h; path = Source/ChooseGame.h; sourceTree = "<group>"; };
+		FDBD6BBD196EF5EB00C3CCAC /* ChooseGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChooseGame.m; path = Source/ChooseGame.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -311,6 +314,8 @@
 			children = (
 				FD078BFA1965F4FB00DA0AED /* GamePlay.h */,
 				FD078BFB1965F4FB00DA0AED /* GamePlay.m */,
+				FDBD6BBC196EF5EB00C3CCAC /* ChooseGame.h */,
+				FDBD6BBD196EF5EB00C3CCAC /* ChooseGame.m */,
 				FD078BFD1965FC5C00DA0AED /* Tile.h */,
 				FD078BFE1965FC5C00DA0AED /* Tile.m */,
 				B737893D1807617C0076A88C /* AppDelegate.h */,
@@ -698,6 +703,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDBD6BBE196EF5EC00C3CCAC /* ChooseGame.m in Sources */,
 				FD078C02196608F900DA0AED /* Grid.m in Sources */,
 				FD078BFC1965F4FB00DA0AED /* GamePlay.m in Sources */,
 				B737893F1807617C0076A88C /* AppDelegate.m in Sources */,
