@@ -122,6 +122,7 @@
 		FD2ED6C1196B04FD00E0F387 /* send-field-landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = FD2ED67A196B04FC00E0F387 /* send-field-landscape.png */; };
 		FD2ED6C3196B541C00E0F387 /* char.png in Resources */ = {isa = PBXBuildFile; fileRef = FD2ED6C2196B541C00E0F387 /* char.png */; };
 		FDBD6BBE196EF5EC00C3CCAC /* ChooseGame.m in Sources */ = {isa = PBXBuildFile; fileRef = FDBD6BBD196EF5EB00C3CCAC /* ChooseGame.m */; };
+		FDBD6BC7196F1F5A00C3CCAC /* gridPiece.png in Resources */ = {isa = PBXBuildFile; fileRef = FDBD6BC6196F1F5A00C3CCAC /* gridPiece.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -265,6 +266,7 @@
 		FD2ED6C2196B541C00E0F387 /* char.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = char.png; sourceTree = "<group>"; };
 		FDBD6BBC196EF5EB00C3CCAC /* ChooseGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChooseGame.h; path = Source/ChooseGame.h; sourceTree = "<group>"; };
 		FDBD6BBD196EF5EB00C3CCAC /* ChooseGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChooseGame.m; path = Source/ChooseGame.m; sourceTree = "<group>"; };
+		FDBD6BC6196F1F5A00C3CCAC /* gridPiece.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gridPiece.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -408,6 +410,7 @@
 		B77F1B4617B978D7009739AE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FDBD6BC6196F1F5A00C3CCAC /* gridPiece.png */,
 				FD2ED6C2196B541C00E0F387 /* char.png */,
 				B73789911807667A0076A88C /* Icons */,
 				B737893A180761570076A88C /* Published-iOS */,
@@ -667,6 +670,7 @@
 				FD2ED688196B04FD00E0F387 /* FBNoThanksButtonPressed.png in Resources */,
 				B7378975180762440076A88C /* Default-568h@2x.png in Resources */,
 				B71F5918188484E7003F4D28 /* iPhone@2x.png in Resources */,
+				FDBD6BC7196F1F5A00C3CCAC /* gridPiece.png in Resources */,
 				FD2ED6A4196B04FD00E0F387 /* MGWUBackground-Portrait~iphone.png in Resources */,
 				B7378977180762440076A88C /* Default.png in Resources */,
 				FD2ED68A196B04FD00E0F387 /* green.png in Resources */,

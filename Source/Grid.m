@@ -11,18 +11,21 @@
 
 @implementation Grid {
     NSMutableArray *_grid;
-}
-
--(void) didLoadFromCCB {
+    NSMutableArray *gridTileArray;
     
+    CCSprite *gridPiece;
 }
 
--(id)init{
+
+-(id)init
+
+{
     self = [super init];
     [self generateGrid];
     return self;
     
 }
+
 
 
 
@@ -40,6 +43,9 @@
         for (int j = 0; j< 3; j++){
             Tile* temptile = [[Tile alloc] init];
             temptile.position = CGPointMake(i * 50 + 50, j * 50 + 50);
+            
+           
+            
             [temp addObject:temptile];
         }
         
