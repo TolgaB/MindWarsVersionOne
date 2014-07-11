@@ -12,8 +12,18 @@
 
 
 @implementation GamePlay {
-    CCSprite *_hero;
+    CCSprite *_playerOne;
     Grid * myGrid;
+    CCSprite *_playerTwo;
+    
+    BOOL playerOneTurn;
+    
+    
+    NSString *_opponent;
+    NSString *_gameState;
+    NSMutableDictionary *_gameData;
+    
+    
 }
 
 
@@ -22,7 +32,9 @@
 -(void)didLoadFromCCB {
     
      self.userInteractionEnabled = TRUE;
+    playerOneTurn = YES;
     [self gameStarted];
+    
 }
 
 -(void)gameStarted {
@@ -30,7 +42,11 @@
     //This loads the grid
     myGrid = [[Grid alloc ]init];
     NSLog(@"The grid has been initialized");
-    _hero.position = [myGrid getPositionOfTile:2 andY:0];
+    
+    _playerOne.position = [myGrid getPositionOfTile:2 andY:0];
+    
+    _playerTwo.position = [myGrid getPositionOfTile:0 andY:2];
+    
     
     
     
@@ -40,10 +56,20 @@
 
 - (void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event
 {
-    CGPoint touchLocation = [touch locationInNode:self];
-    Tile* myTile = [myGrid getTileForTouchPosition:touchLocation];
+    if (playerOneTurn) {
+        CGPoint touchLocation = [touch locationInNode:self];
+        Tile* myTile = [myGrid getTileForTouchPosition:touchLocation];
+        _playerOne.position = myTile.position;
+        playerOneTurn = false;
+
+    }
+    else {
+        CGPoint touchLocation = [touch locationInNode:self];
+        Tile* myTile = [myGrid getTileForTouchPosition:touchLocation];
+        _playerTwo.position = myTile.position;
+        playerOneTurn = true;
+    }
     
-    _hero.position = myTile.position;
     
     
     NSLog(@"Touch Gotten");

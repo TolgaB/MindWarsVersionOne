@@ -14,13 +14,16 @@
     NSMutableArray *gridTileArray;
     
     CCSprite *gridPiece;
+    float _tileWidth;
 }
 
 
 -(id)init
 
 {
+    
     self = [super init];
+    _tileWidth = 50.0;
     [self generateGrid];
     return self;
     
@@ -42,7 +45,7 @@
         
         for (int j = 0; j< 3; j++){
             Tile* temptile = [[Tile alloc] init];
-            temptile.position = CGPointMake(i * 50 + 50, j * 50 + 50);
+            temptile.position = CGPointMake(i *_tileWidth + 200, j*_tileWidth + 200);
             
            
             
@@ -63,12 +66,13 @@
     
     NSLog(@"x: %f y: %f", pos.x, pos.y);
     
-    if (pos.x > 150 || pos.y > 150) {
+    if (pos.x > (200+_tileWidth*2.5)  || pos.y > (200+_tileWidth*2.5)) {
         NSLog(@"Touch out of grid");
+        
         return nil;
     }
     
-    if (pos.x < 25 || pos.y < 25) {
+    if (pos.x < (200-_tileWidth/2) || pos.y < (200-_tileWidth/2) ) {
         NSLog(@"Touch out of grid");
         
         return nil;
@@ -77,7 +81,7 @@
     float ypoint = pos.y;
     float xpoint = pos.x;
     
-    Tile* anotherTempTile = _grid [(int)floorf((xpoint - 25) / 50.0)] [(int)floorf((ypoint - 25.0) / 50.0)];
+    Tile* anotherTempTile = _grid [(int)floorf((xpoint - (200-_tileWidth/2)) / _tileWidth)] [(int)floorf((ypoint - (200-_tileWidth/2)) / _tileWidth)];
     
     
     return anotherTempTile;
