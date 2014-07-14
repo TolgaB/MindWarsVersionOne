@@ -43,10 +43,12 @@
         //Each "temp" array acts as a row in this case 3 tiles in a temp
         NSMutableArray * temp = [[NSMutableArray alloc]init];
         
+        
         for (int j = 0; j< 3; j++){
             Tile* temptile = [[Tile alloc] init];
             temptile.position = CGPointMake(i *_tileWidth + 200, j*_tileWidth + 200);
-            
+            temptile.positionX = [NSNumber numberWithInt:i];
+            temptile.positionY = [NSNumber numberWithInt:j];
            
             
             [temp addObject:temptile];

@@ -18,6 +18,7 @@
      2) Start a random match
      */
     NSLog(@"%@",[MGWU getUsername]);
+    
     [MGWU getRandomGameWithCallback:@selector(receivedRandomGame:) onTarget:self];
 }
 

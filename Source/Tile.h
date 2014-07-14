@@ -11,6 +11,7 @@
 @interface Tile : CCNode
 
 @property(nonatomic, assign)CGPoint point;
-
+@property(nonatomic, strong)NSNumber *positionX;
+@property(nonatomic, strong)NSNumber *positionY;
 
 @end

@@ -24,6 +24,15 @@
     NSMutableDictionary *_gameData;
     
     
+    int officialMoveNumber;
+    
+    bool pastFirstMove;
+    
+    
+    
+    
+    
+    
 }
 
 
@@ -33,6 +42,8 @@
     
      self.userInteractionEnabled = TRUE;
     playerOneTurn = YES;
+    officialMoveNumber = 1;
+    pastFirstMove =  false;
     [self gameStarted];
     
 }
@@ -56,18 +67,47 @@
 
 - (void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event
 {
+ 
+    	int gameId = [_game[@"gameid"] intValue];
+    
     if (playerOneTurn) {
         CGPoint touchLocation = [touch locationInNode:self];
         Tile* myTile = [myGrid getTileForTouchPosition:touchLocation];
-        _playerOne.position = myTile.position;
-        playerOneTurn = false;
+
+        
+        if(myTile != nil){
+            _playerOne.position = myTile.position;
+            
+            NSDictionary *playerMove = @{@"X": myTile.positionX, @"Y": myTile.positionY};
+            
+            if (pastFirstMove){
+          [MGWU move:playerMove withMoveNumber:officialMoveNumber forGame:gameId withGameState:@"started" withGameData:playerMove againstPlayer:@"mgwu-random" withPushNotificationMessage:@"Opponent has moved" withCallback:@selector(moveCompleted:) onTarget:self];
+          
+            
+            officialMoveNumber++;
+            }
+            
+            else {
+                [MGWU move:playerMove withMoveNumber:officialMoveNumber forGame:gameId withGameState:@"inprogress" withGameData:playerMove againstPlayer:@"mgwu-random" withPushNotificationMessage:@"Opponent has moved" withCallback:@selector(moveCompleted:) onTarget:self];
+                
+                
+                officialMoveNumber++;
+                
+            }
+            
+            playerOneTurn = false;
+            
+        }
 
     }
     else {
         CGPoint touchLocation = [touch locationInNode:self];
         Tile* myTile = [myGrid getTileForTouchPosition:touchLocation];
-        _playerTwo.position = myTile.position;
-        playerOneTurn = true;
+        if(myTile != nil){
+            _playerTwo.position = myTile.position;
+            playerOneTurn = true;
+            officialMoveNumber++;
+        }
     }
     
     
@@ -76,5 +116,51 @@
     
 }
 
+
+- (void)moveCompleted:(NSMutableDictionary*)game {
+   	_game = game;
+    //Reload view based on received game
+    //[self reload];
+}
+
+
+-(void)reload {
+    
+    _gameState = _game[@"gamestate"];
+    _gameData = _game[@"gamedata"];
+    
+    if (_gameState) {
+        //No game exists start a game
+        
+        _gameState = @"started";
+        _gameData = [@{@"number":@10} mutableCopy];
+    }
+    
+    else {
+        
+        
+        _gameState = _game[@"inprogress"];
+        
+        
+    }
+
+    
+    
+    
+    
+    
+    
+}
+
+
+
+
+-(void)reloadButtonPressed {
+    [MGWU getGame:0 withCallback:@selector(gotGame:) onTarget:self];
+}
+
+- (void)gotGame:(NSMutableDictionary*)game {
+    
+}
 
 @end
